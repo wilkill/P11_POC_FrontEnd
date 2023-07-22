@@ -1,14 +1,11 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { MedheadGPSComponent } from "./medhead-gps/medhead-gps.component";
-
-const routes: Routes = [
-    { path: '' , component: MedheadGPSComponent}
-];
+import { RouterModule } from "@angular/router";
+import { RouterTestingModule } from "@angular/router/testing";
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot([]),
+        RouterTestingModule
     ],
     exports: [
         RouterModule

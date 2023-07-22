@@ -12,8 +12,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    MedheadHeaderComponent,
     MedheadGPSComponent,
+    AppComponent
+  ],
+  exports:[
     MedheadHeaderComponent
   ],
   imports: [

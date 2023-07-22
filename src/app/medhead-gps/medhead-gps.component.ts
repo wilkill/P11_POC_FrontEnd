@@ -14,12 +14,12 @@ import { Specialization } from '../model/medhead-specialization.model';
   styleUrls: ['./medhead-gps.component.scss']
 })
 export class MedheadGPSComponent implements OnInit{
-  @Input() medheadGPS!:MedheadGPS;
+  medheadGPS!:MedheadGPS;
   
   hopistal$!: Observable<Hospital>;
   specialization$!:  Observable<Specialization[]>;
 
-  constructor(private route: ActivatedRoute, private medheadService : MedHeadService) {}
+  constructor(private medheadService : MedHeadService) {}
 
   title!: string;
   description!: string;
@@ -28,8 +28,9 @@ export class MedheadGPSComponent implements OnInit{
   longitude!: number;
   
   ngOnInit(){
-    this.title = this.medheadGPS.title;
-    this.description =  this.medheadGPS.description;
+  
+    this.title = 'Module de recherche d\'hopital le plus proche';
+    this.description =  'Appel via API la methode backend de recherche avec Google API';
     this.specialization$ = this.medheadService.getSpecialization();
 
     //for testing : examples values

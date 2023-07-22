@@ -11,17 +11,14 @@ Exécutez `ng serve` pour démarrer le serveur de développement. Accédez à ht
 Utilisez `ng generate component component-name` pour générer un nouveau composant. Vous pouvez également utiliser `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
-Clonner le git sur votre poste : `git clone https://github.com/wilkill/P11_POC_FrontEnd.git`\
-Installation des librairies Angular via la commande : `npm install`\
+Cloner le projet git sur votre poste dans votre destination : `git clone https://github.com/wilkill/P11_POC_FrontEnd.git`\
+Installation les librairies Angular via la commande : `npm install`\
 Exécutez `ng build` pour construire le projet. Les fichiers de build seront stockés dans le répertoire `dist/`.
 
 ## Running unit tests
 
 Exécutez `ng test`  pour exécuter les tests unitaires via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Exécutez `ng e2e` pour exécuter les tests end-to-end sur la plateforme de votre choix. Pour utiliser cette commande, vous devez d'abord ajouter un package qui implémente les capacités de test end-to-end.
 
 ## Further help
 

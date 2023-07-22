@@ -1,18 +1,30 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { MedheadHeaderComponent } from './medhead-header/medhead-header.component';
+import { MedheadGPSComponent } from './medhead-gps/medhead-gps.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing'
+import { RouterTestingModule } from "@angular/router/testing";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
-  }));
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
 
-  it('should create the app', () => {
+  beforeEach(async() => { TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule,RouterTestingModule,ReactiveFormsModule,FormsModule],
+      declarations: [AppComponent,MedheadHeaderComponent,MedheadGPSComponent]
+    });
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+  });
+
+  it('should create the app', async() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'MedHead'`, () => {
+  it(`should have as title 'MedHead'`, async() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('MedHead');
@@ -22,6 +34,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('MedHead app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Medhead is running!');
   });
 });
+
+

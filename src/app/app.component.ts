@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MedheadGPS } from './model/medhead-gps.mobel';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,14 +9,11 @@ import { MedheadGPS } from './model/medhead-gps.mobel';
 })
 export class AppComponent implements OnInit{
 
-  title = 'MedHead Frontend';
-  mymedheadGPS!: MedheadGPS;
+  title = 'MedHead';
+
 
   ngOnInit() {
-    this.mymedheadGPS = {
-      title: 'Module de recherche d\'hopital le plus proche',
-      description: 'Appel via API la methode backend de recherche avec Google API'
-  };
+   
 
   }
   
