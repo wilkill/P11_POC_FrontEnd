@@ -1,0 +1,54 @@
+<div class="medhead-gps-card">
+<h2>{{ medheadGPS.title }} </h2>
+<p>{{ medheadGPS.description }}</p>
+<form #medheadGPSForm="ngForm" (ngSubmit)="onSubmitForm(medheadGPSForm)">
+    <table class="table-full">
+
+        <thead>
+            <tr>
+                <th>Spécialisation</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select id="specialization" [(ngModel)]="specialization" name="specialization" required> 
+                        <option *ngFor="let item of specialization$ | async" [value]="item.id">{{ item.name }}</option>
+                      </select>
+                    </td>
+                <td><input type="number" id="latitudeInput" [(ngModel)]="latitude" name="latitude" required></td>
+                <td><input type="number" id="longitudeInput" [(ngModel)]="longitude" name="longitude" required></td>
+            </tr>
+            <tr>
+                <td colspan="3"><br>
+                   
+                
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><button type="submit" [disabled]="medheadGPSForm.invalid" >Rechercher</button></td>
+            </tr>
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+</form>
+</div>
+<div class="medhead-gps-result" *ngIf="hopistal$ | async as hospital">
+    
+    <table>
+        <tr>
+            <td class="column-title">Hopital : </td><td class="column-result">{{hospital.name}}</td>
+        </tr>
+        <tr>
+            <td class="column-title">Latitude : </td><td class="column-result">{{hospital.latitude}}</td>
+        </tr>
+        <tr>
+            <td class="column-title">Longitude : </td><td class="column-result">{{hospital.longitude}}</td>
+        </tr>
+
+    </table>
+</div>
