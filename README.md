@@ -11,7 +11,8 @@ Exécutez `ng serve` pour démarrer le serveur de développement. Accédez à ht
 Utilisez `ng generate component component-name` pour générer un nouveau composant. Vous pouvez également utiliser `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
-
+Clonner le git sur votre poste : `git clone https://github.com/wilkill/P11_POC_FrontEnd.git`\
+Installation des librairies Angular via la commande : `npm install`\
 Exécutez `ng build` pour construire le projet. Les fichiers de build seront stockés dans le répertoire `dist/`.
 
 ## Running unit tests
