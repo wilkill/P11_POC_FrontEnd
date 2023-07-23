@@ -47,6 +47,7 @@ export class MedHeadService{
         return this.http.get<Specialization[]>(this.baseApiUrl+this.apiSpecialisation,options).pipe(
             map((response: any) => {
                 if(response === null || response === ''){
+                    //alert message of error
                     this.showErrorMessage('Aucune Specialisation n\'est présente');
                 }
                 return response;
@@ -54,7 +55,7 @@ export class MedHeadService{
             catchError((error) => {
                 // Handle error response here
                 console.error('Error:', error);
-
+                //alert message of error
                 this.showErrorMessage('Une erreur technique est survenue,merci de réessayer ultérieurement.');
                 // Return an Observable containing the error message
                 return throwError(() => new Error('An error occurred while processing the request.'));
