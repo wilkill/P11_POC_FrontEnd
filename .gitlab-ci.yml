@@ -31,7 +31,7 @@ variables:
 default:
   # It saves ~10 sec to pull image from project container registry
   # instead of the default docker.io registry
-  image: $CI_REGISTRY_IMAGE/ci-node:latest
+  image: node:18-alpine
   tags:
     - docker
 
@@ -68,7 +68,7 @@ test_app:
   stage: build_and_test
 
   # Use custom image because installing chrome in before_scripts takes ~30 sec
-  image: $CI_REGISTRY_IMAGE/ci-tests:latest
+  image: node:14-alpine
   script:
 
     # Could be in a parallel job during this stage but:
