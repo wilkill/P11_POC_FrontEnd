@@ -1,4 +1,4 @@
-image: node:18-alpine
+image: node:16-alpine
 
 stages:
   - install
@@ -9,3 +9,9 @@ install:
   stage: install
   script:
     - npm ci
+
+test:
+  stage: test
+  script :
+    - npm ci
+    - npm run test
