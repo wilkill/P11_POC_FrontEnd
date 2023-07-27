@@ -19,4 +19,4 @@ test:
     - export CHROME_BIN=/usr/bing/google-chrome
   script :
     - npm ci
-    - npm run test -- --no-watch --browsers=ChromeHeadlessCI
+    - npm run test -- --watch=false --browsers=ChromeHeadless
