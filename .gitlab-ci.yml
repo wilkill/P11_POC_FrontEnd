@@ -1,4 +1,4 @@
-image: node:16-alpine
+image: node:16-bullseye
 
 stages:
   - install
@@ -12,6 +12,11 @@ install:
 
 test:
   stage: test
+  before_script:
+    - apt-get update
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - apt install -y ./google-chrome*.deb
+    - export CHROME_BIN=/usr/bing/google-chrome
   script :
     - npm ci
-    - npm run test
+    - npm run test -- --no-watch --browsers=CgromeHeadlessCI
