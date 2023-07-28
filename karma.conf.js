@@ -33,7 +33,7 @@ module.exports = function (config) {
       ]
     },
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Chrome'],
+    browsers: ['Chrome','ChromeHeadLess'],
     customLaunchers: {
       base: 'ChromeHeadLess',
       flags: [
