@@ -33,9 +33,9 @@ module.exports = function (config) {
       ]
     },
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Chrome','ChromeHeadLess'],
+    browsers: ['Chrome'],
     customLaunchers: {
-      base: 'ChromeHeadLess',
+      base: 'ChromeHeadless',
       flags: [
         '--no-sandbox',
         '--disable-setuid-sandbox'
