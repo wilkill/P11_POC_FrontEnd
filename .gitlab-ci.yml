@@ -3,6 +3,7 @@ image: node:16-bullseye
 stages:
   - install
   - test
+  - deploy
 
 
 install:
@@ -20,3 +21,8 @@ test:
   script :
     - npm ci
     - npm run test
+
+deploy:
+  stage: deploy
+  script :
+    - npm ci
