@@ -19,6 +19,10 @@ Exécutez `ng build` pour construire le projet. Les fichiers de build seront sto
 
 Exécutez `ng test`  pour exécuter les tests unitaires via [Karma](https://karma-runner.github.io).
 
+## Running e2e tests
+
+Exécutez `ng e2e`  pour exécuter les tests e2e via [Cypress](https://www.cypress.io/).
+
 
 ## Further help
 
