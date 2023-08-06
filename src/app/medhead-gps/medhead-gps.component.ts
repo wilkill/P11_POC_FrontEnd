@@ -34,9 +34,9 @@ export class MedheadGPSComponent implements OnInit{
     this.specialization$ = this.medheadService.getSpecialization();
 
     //for testing : examples values
-    this.latitude = -21.114302; //for testing
-    this.longitude = 55.654626; // for testing
-    this.specialization = 17; // for testing
+    // this.latitude = -21.114302; //for testing
+    // this.longitude = 55.654626; // for testing
+    // this.specialization = 17; // for testing
 
   }
   
